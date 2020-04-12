@@ -141,8 +141,13 @@
 				<version>3.0.2</version>
 				<configuration>
 					<appName>spring-conference-app</appName>
+					<includeTarget>false</includeTarget>
+					<includes>
+						<include>${project.build.directory}/${project.build.finalName}.jar</include>
+					</includes>
+					<jdkVersion>1.8</jdkVersion>
 					<processTypes>
-						<web>java $JAVA_OPTS -cp target/classes:target/dependency/* com.pluralsight.ConferenceAppApplication</web>
+						<web>java $JAVA_OPTS -jar ${project.build.directory}/${project.build.finalName}.jar</web>
 					</processTypes>
 				</configuration>
 			</plugin>
