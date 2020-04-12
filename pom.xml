@@ -142,13 +142,13 @@
 				<configuration>
 					<appName>spring-conference-app</appName>
 					<includeTarget>false</includeTarget>
-					<includes>
-						<include>${project.build.directory}/${project.build.finalName}.jar</include>
-					</includes>
-					<jdkVersion>1.8</jdkVersion>
-					<processTypes>
-						<web>java $JAVA_OPTS -jar ${project.build.directory}/${project.build.finalName}.jar</web>
-					</processTypes>
+                    <includes>
+                        <include>${project.build.directory}/${project.build.finalName}.jar</include>
+                    </includes>
+                    <jdkVersion>1.8</jdkVersion>
+                    <processTypes>
+                        <web>java $JAVA_OPTS -jar target/${project.build.finalName}.jar</web>
+                    </processTypes>
 				</configuration>
 			</plugin>
 		</plugins>
