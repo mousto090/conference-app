@@ -11,7 +11,7 @@
 	</parent>
 	<groupId>com.pluralsight</groupId>
 	<artifactId>conference-app</artifactId>
-	<version>0.0.1</version>
+	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 	<name>conference-app</name>
 	<description>Pluralsight - Creating Your First Spring Boot Application</description>
@@ -20,10 +20,9 @@
 		<java.version>13</java.version>
 	</properties>
 	<scm>
-		<connection>scm:git:git@github.com:mousto090/conference-app.git</connection>
-		<url>scm:git:git@github.com:mousto090/conference-app.git</url>
-		<developerConnection>scm:git:git@github.com:mousto090/conference-app.git</developerConnection>
-		<tag>conference-app-0.0.1</tag>
+		<connection>scm:git:https://github.com/mousto090/conference-app.git</connection>
+		<url>scm:git:https://github.com/mousto090/conference-app.git</url>
+		<developerConnection>scm:git:https://github.com/mousto090/conference-app.git</developerConnection>
 	</scm>
 	<profiles>
 		<profile>
@@ -51,7 +50,7 @@
 						<version>3.0.0-M1</version>
 						<configuration>
 							<configuration>
-								<tagNameFormat>@{project.version}</tagNameFormat>
+								<tagNameFormat>v@{project.version}</tagNameFormat>
 								<releaseProfiles>prod</releaseProfiles>
 							</configuration>
 						</configuration>
