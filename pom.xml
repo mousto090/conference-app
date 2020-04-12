@@ -118,7 +118,7 @@
 				<artifactId>maven-enforcer-plugin</artifactId>
 				<executions>
 					<!-- Make sure one profile is active -->
-					<execution>
+					<!-- <execution>
 						<id>enforce-profile-target</id>
 						<phase>validate</phase>
 						<goals>
@@ -132,7 +132,7 @@
 								</requireActiveProfile>
 							</rules>
 						</configuration>
-					</execution>
+					</execution> -->
 				</executions>
 			</plugin>
 			<plugin>
