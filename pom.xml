@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -21,8 +23,8 @@
 		<connection>scm:git:https://github.com/mousto090/conference-app.git</connection>
 		<url>scm:git:https://github.com/mousto090/conference-app.git</url>
 		<developerConnection>scm:git:https://github.com/mousto090/conference-app.git</developerConnection>
-	  <tag>conference-app-0.0.1</tag>
-  </scm>
+		<tag>conference-app-0.0.1</tag>
+	</scm>
 	<profiles>
 		<profile>
 			<id>dev</id>
@@ -54,25 +56,11 @@
 							</configuration>
 						</configuration>
 					</plugin>
-					<plugin>
-						<groupId>org.apache.maven.plugins</groupId>
-						<artifactId>maven-enforcer-plugin</artifactId>
-						<executions>
-							<execution>
-								<id>enforce-no-snapshot-prod</id>
-								<phase>validate</phase>
-								<goals>
-									<goal>enforce</goal>
-								</goals>
-								<configuration>
-									<rules>
-										<requireReleaseVersion />
-										<requireReleaseVersion />
-									</rules>
-								</configuration>
-							</execution>
-						</executions>
-					</plugin>
+					<!-- <plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-enforcer-plugin</artifactId> 
+						<executions> <execution> <id>enforce-no-snapshot-prod</id> <phase>validate</phase> 
+						<goals> <goal>enforce</goal> </goals> <configuration> <rules> <requireReleaseVersion 
+						/> <requireReleaseVersion /> </rules> </configuration> </execution> </executions> 
+						</plugin> -->
 				</plugins>
 			</build>
 		</profile>
@@ -146,6 +134,14 @@
 						</configuration>
 					</execution>
 				</executions>
+			</plugin>
+			<plugin>
+				<groupId>com.heroku.sdk</groupId>
+				<artifactId>heroku-maven-plugin</artifactId>
+				<version>3.0.2</version>
+				<configuration>
+					<appName>spring-conference-app</appName>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
