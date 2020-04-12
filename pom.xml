@@ -141,6 +141,9 @@
 				<version>3.0.2</version>
 				<configuration>
 					<appName>spring-conference-app</appName>
+					<processTypes>
+						<web>java $JAVA_OPTS -cp target/classes:target/dependency/* com.pluralsight.ConferenceAppApplication</web>
+					</processTypes>
 				</configuration>
 			</plugin>
 		</plugins>
