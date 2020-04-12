@@ -116,9 +116,8 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-enforcer-plugin</artifactId>
-				<executions>
-					<!-- Make sure one profile is active -->
-					<!-- <execution>
+				<!-- <executions>
+					<execution>
 						<id>enforce-profile-target</id>
 						<phase>validate</phase>
 						<goals>
@@ -132,8 +131,8 @@
 								</requireActiveProfile>
 							</rules>
 						</configuration>
-					</execution> -->
-				</executions>
+					</execution>
+				</executions> -->
 			</plugin>
 			<plugin>
 				<groupId>com.heroku.sdk</groupId>
