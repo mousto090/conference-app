@@ -1,1 +1,0 @@
-web: java -jar target/conference-app-0.0.2-SNAPSHOT.jar com.pluralsight.ConferenceAppApplication
